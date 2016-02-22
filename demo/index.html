@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container{
+      display: flex;
+      justify-content: space-between;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+<div ng-controller="exampleCtrl" class="container">
+  <google-sign-in width="250" height="50" longtitle="true" theme="light"></google-sign-in>
+
+  <button ng-click="logout()">logout</button>
+</div>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../dist/angular-google-auth2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
