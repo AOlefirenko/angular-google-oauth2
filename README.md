@@ -1,10 +1,14 @@
 # angular-google-oauth2
-A lightweight library to perform client side authentication with Google OAuth2.
-
 [![npm version](https://img.shields.io/npm/v/angular-google-auth2.svg?style=flat-square)](https://www.npmjs.org/package/angular-google-auth2)
 [![npm downloads](https://img.shields.io/npm/dm/angular-google-auth2.svg?style=flat-square)](https://www.npmjs.org/package/angular-google-auth2)
 [![Dependency Status](https://david-dm.org/AOlefirenko/angular-google-auth2.svg)](https://david-dm.org/AOlefirenko/angular-google-auth2)
 [![devDependency Status](https://david-dm.org/AOlefirenko/angular-google-auth2/dev-status.svg)](https://david-dm.org/AOlefirenko/angular-google-auth2#info=devDependencies)
+
+A lightweight library to perform client side authentication with Google OAuth2.
+
+![example](https://github.com/AOlefirenko/angular-google-oauth2/blob/master/demo/example.PNG)
+
+
 
 
 ###Installation
@@ -50,7 +54,7 @@ app.config(function (gapiAuth2CredentialsProvider) {
     gapiAuth2.getAuthInstance().then(function(res){
       console.log(res.instance.isSignedIn.get())
     })
-
+```
 ####Events
 
   **google:oauth2:signed-in**
