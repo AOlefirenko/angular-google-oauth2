@@ -1,8 +1,8 @@
 # angular-google-oauth2
-[![npm version](https://img.shields.io/npm/v/angular-google-auth2.svg?style=flat-square)](https://www.npmjs.org/package/angular-google-auth2)
-[![npm downloads](https://img.shields.io/npm/dm/angular-google-auth2.svg?style=flat-square)](https://www.npmjs.org/package/angular-google-auth2)
-[![Dependency Status](https://david-dm.org/AOlefirenko/angular-google-auth2.svg)](https://david-dm.org/AOlefirenko/angular-google-auth2)
-[![devDependency Status](https://david-dm.org/AOlefirenko/angular-google-auth2/dev-status.svg)](https://david-dm.org/AOlefirenko/angular-google-auth2#info=devDependencies)
+[![npm version](https://img.shields.io/npm/v/angular-google-oauth2.svg?style=flat-square)](https://www.npmjs.org/package/angular-google-oauth2)
+[![npm downloads](https://img.shields.io/npm/dm/angular-google-oauth2.svg?style=flat-square)](https://www.npmjs.org/package/angular-google-oauth2)
+[![Dependency Status](https://david-dm.org/AOlefirenko/angular-google-oauth2.svg)](https://david-dm.org/AOlefirenko/angular-google-oauth2)
+[![devDependency Status](https://david-dm.org/AOlefirenko/angular-google-oauth2/dev-status.svg)](https://david-dm.org/AOlefirenko/angular-google-oauth2#info=devDependencies)
 
 A lightweight library to perform client side authentication with Google OAuth2.
 
