@@ -1,6 +1,6 @@
 {
   "name": "angular-google-auth2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A lightweight library to perform client side authentication with Google OAuth2.",
   "main": "dist/angular-google-auth2.js",
   "jsnext:main": "src/index.js",
