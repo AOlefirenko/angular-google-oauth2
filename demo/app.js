@@ -10,7 +10,7 @@ app.controller('exampleCtrl', function ($rootScope,gapiAuth2) {
 
   $rootScope.logout = function(){
     gapiAuth2.logout().then(function(){
-      console.log('log out')
+      console.log('log out');
     })
   }
 
