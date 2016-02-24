@@ -1,6 +1,6 @@
 {
   "name": "angular-google-oauth2",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "A lightweight library to perform client side authentication with Google OAuth2.",
   "main": "dist/angular-google-auth2.js",
   "jsnext:main": "src/index.js",
@@ -13,7 +13,7 @@
     "build:umd": "webpack src/index.js dist/angular-google-auth2.js --config webpack/webpack.config.development.js",
     "build:umd:min": "webpack src/index.js dist/angular-google-auth2.min.js --config webpack/webpack.config.production.js",
     "build": "npm run clean && npm run build:umd && npm run build:umd:min",
-    "preversion":"npm run build"
+    "preversion": "npm run build"
   },
   "npmName": "angular-google-oauth2",
   "author": "Andrey Olefirenko<ole.olefirenko@gmail.com>",
