@@ -13,28 +13,32 @@ A lightweight library to perform client side authentication with Google OAuth2.
 
 ###Installation
 
-  ```npm install angular-google-auth2 --save```
+```npm install angular-google-auth2 --save```
 
 Include this script in your index.html file before your application bundle
 ```html
 <script src="https://apis.google.com/js/platform.js"></script>
 ```
 Configure your application
-  ```javascript
+
+```javascript
 var app = angular.module('example', ['googleOAuth2']);
 app.config(function (gapiAuth2CredentialsProvider) {
    gapiAuth2CredentialsProvider.client_id = '<YOUR_CLIENT_ID>';
 })
-  ```
+```
 ###Usage
 
 ####Directive
-  ```html
+
+```html
 <google-sign-in width="250" height="50" longtitle="true" theme="light"></google-sign-in>
-  ```
+```
 
 ####Service
+
  **gapiAuth2**
+ 
   This is the simplest wrapper of Google library. For more information look at [Client reference](https://developers.google.com/identity/sign-in/web/reference)
 
  There are only two methods:
@@ -42,34 +46,37 @@ app.config(function (gapiAuth2CredentialsProvider) {
  * *logout()*
 
   Returns promise
-    ```javascript
-    gapiAuth2.logout().then(function(){
-      console.log('logged out')
-    })
-    ```
+```javascript
+gapiAuth2.logout().then(function(){
+  console.log('logged out')
+})
+```
  * *getAuthInstance()*
 
  Gives access to the native methods. Returns promise
-  ```javascript
-    gapiAuth2.getAuthInstance().then(function(res){
-      console.log(res.instance.isSignedIn.get())
-    })
+ 
+```javascript
+gapiAuth2.getAuthInstance().then(function(res){
+  console.log(res.instance.isSignedIn.get())
+})
 ```
 ####Events
 
   **google:oauth2:signed-in**
-  ```javascript
+  
+```javascript
 $rootScope.$on('google:oauth2:signed-in', function (e,val) {
   console.log('is signed in', val)
 })
-  ```
+```
 
   **google:oauth2:profile**
+  
 ```javascript
 $rootScope.$on('google:oauth2:profile', function (e,profile) {
   console.log('got profile', profile)
 })
-  ```
+```
 
 ###Contribution
 Feel free to extend functionality of this library if you need.
