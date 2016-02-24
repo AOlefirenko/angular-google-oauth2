@@ -6,15 +6,17 @@ export default   function bootstrap($window, gapiAuth2Credentials, $rootScope) {
       client_id: gapiAuth2Credentials.client_id,
       scope: 'profile'
     });
-    $rootScope.$broadcast('google:oauth2:signed-in', auth2.isSignedIn.get());
     auth2.isSignedIn.listen(val=> {
       $rootScope.$broadcast('google:oauth2:signed-in', val);
     });
+    var firstCheck = true;
     auth2.currentUser.listen((user)=> {
-      if (!user.isSignedIn()) return;
+      if (!user.isSignedIn()) {
+        return firstCheck && $rootScope.$broadcast('google:oauth2:signed-in', false),firstCheck=false;
+      }
       var profile = user.getBasicProfile();
       if (!profile) return console.error('profile is undefinded');
-      ;
+
       var userPic = profile.getImageUrl();
       var name = profile.getName();
       var id = profile.getId();
