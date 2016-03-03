@@ -16,11 +16,12 @@ export default   function bootstrap($window, gapiAuth2Credentials, $rootScope) {
       }
       var profile = user.getBasicProfile();
       if (!profile) return console.error('profile is undefinded');
-
+      var id_token = user.getAuthResponse().id_token;
       var userPic = profile.getImageUrl();
       var name = profile.getName();
       var id = profile.getId();
       var email = profile.getEmail();
+      $rootScope.$broadcast('google:oauth2:token', id_token);
       $rootScope.$broadcast('google:oauth2:profile', {id, email, name, userPic});
     });
   });
