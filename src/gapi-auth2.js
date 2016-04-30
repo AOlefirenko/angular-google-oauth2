@@ -4,7 +4,7 @@ export default function gapiAuth2($window, $q) {
   var svc = this;
   var deferred = $q.defer();
   var auth2Promise = deferred.promise;
-  
+
   $window.gapi.load('auth2', () => {
     deferred.resolve($window.gapi.auth2)
   });
@@ -44,4 +44,14 @@ export default function gapiAuth2($window, $q) {
     });
     return deferred.promise;
   };
+
+  svc.getIdToken = function(){
+    var deferred = $q.defer();
+    svc.getAuthInstance().then(x => {
+      var inst =  x.instance;
+      deferred.resolve(inst.currentUser.get().getAuthResponse().id_token);
+    });
+    return deferred.promise;
+  }
+
 }
