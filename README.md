@@ -13,7 +13,7 @@ A lightweight library to perform client side authentication with Google OAuth2.
 
 ###Installation
 
-```npm install angular-google-auth2 --save```
+```npm install angular-google-0auth2 --save```
 
 Include this script in your index.html file before your application bundle
 ```html
